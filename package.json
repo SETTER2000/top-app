@@ -6,10 +6,12 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "stylelint": "npx prettier --write \"**/*.css\" && npx stylelint \"**/*.css\" --fix"
   },
   "dependencies": {
     "next": "15.4.4",
+    "postcss-modules": "^6.0.1",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
@@ -26,6 +28,11 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-unused-imports": "^4.1.4",
+    "prettier": "3.6.2",
+    "stylelint": "^16.22.0",
+    "stylelint-config-recess-order": "^7.1.0",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-order": "^7.0.0",
     "typescript": "^5"
   }
 }
