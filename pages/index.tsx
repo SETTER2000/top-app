@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export default function Home(): JSX.Element {
+  const a =1;
   return (
     <>
       <Head>
@@ -102,6 +103,7 @@ export default function Home(): JSX.Element {
             target="_blank"
             rel="noopener noreferrer"
           >
+            Powered by Globe {a}
             <Image
               aria-hidden
               src="/globe.svg"
