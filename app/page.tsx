@@ -1,8 +1,23 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import {JSX} from "react";
+import type {Metadata} from "next";
+import { Author } from "next/dist/lib/metadata/types/metadata-types";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const author:Author = {
+    url: "https://github.com/SETTER2000",
+    name: "SETTER"
+  };
+ return  {
+   title: "Generate Metadata...",
+   authors: author,
+ }
+}
+
 
 export default function Home(): JSX.Element {
+  const a = 1100;
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -81,6 +96,7 @@ export default function Home(): JSX.Element {
           target="_blank"
           rel="noopener noreferrer"
         >
+          Powered by{a}
           <Image
             aria-hidden
             src="/globe.svg"
