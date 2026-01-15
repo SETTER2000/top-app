@@ -1,9 +1,10 @@
+import { Htag } from "@/components/Htag/Htag";
 import { JSX } from "react";
 
 export default function Home(): JSX.Element {
 	return (
 		<div>
-			И это всё о нём!
+			<Htag tag="h1">Текст</Htag>
 		</div>
-	)
+	);
 }
