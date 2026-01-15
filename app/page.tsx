@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
     name: "SETTER"
   };
  return  {
-   title: "Generate Metadata...",
+   title: "Top App",
    authors: author,
  }
 }
