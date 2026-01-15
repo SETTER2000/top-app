@@ -7,7 +7,12 @@ import { Noto_Sans_Display } from "next/font/google";
 // Конфигурация шрифта
 const notoSans = Noto_Sans_Display({
  subsets: ["cyrillic", "latin"], // Выберите нужные подмножества
- variable: "--font-noto", // CSS переменная
+ display: "swap",
+ // Стратегия отображения:
+ // "swap" — сразу показывает текст системным шрифтом, потом заменяет на загруженный
+ // "block" — скрывает текст пока не загрузится шрифт
+ // "fallback", "optional" — другие стратегии
+ // variable: "--font-noto", // CSS переменная - здесь не нужна
  // Какие языковые подмножества загружать:
  // - "latin" — базовый латинский набор
  // - "cyrillic" — кириллица (русский и др.)
@@ -25,11 +30,7 @@ const notoSans = Noto_Sans_Display({
  // 800 — Extra Bold
  // 900 — Black (очень жирный)
 
- display: "swap",
- // Стратегия отображения:
- // "swap" — сразу показывает текст системным шрифтом, потом заменяет на загруженный
- // "block" — скрывает текст пока не загрузится шрифт
- // "fallback", "optional" — другие стратегии
+
 });
 
 export default function App({ Component, pageProps }: AppProps){
@@ -39,7 +40,7 @@ export default function App({ Component, pageProps }: AppProps){
    <link rel="icon" href="/favicon.ico" />
 
   </Head>
-  <div className={notoSans.variable}> {/* Используем .variable */}
+  <div className={notoSans.className}> {/* Используем .variable */}
    <Component {...pageProps} />
   </div>
  </>;
