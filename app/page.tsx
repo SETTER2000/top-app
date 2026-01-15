@@ -23,10 +23,10 @@ export default function Home(): JSX.Element {
       <main className={styles.main}>
         <Image
           className={styles.logo}
-          src="/next.svg"
+          src="/piple-dog.svg"
           alt="Next.js logo"
-          width={180}
-          height={38}
+          width={174}
+          height={161}
           priority
         />
         <ol>
